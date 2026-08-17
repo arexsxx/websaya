@@ -1,0 +1,47 @@
+@import "tailwindcss";
+html,
+body {
+  overflow-x: clip;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-300 font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .animate-blink {
+    animation: blink 0.8s step-end infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
+  }
+
+  .animate-loading-bar {
+    animation: loading 0.8s ease infinite;
+  }
+}
