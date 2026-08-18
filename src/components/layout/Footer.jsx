@@ -28,9 +28,9 @@ export default function Footer() {
                 Status
               </p>
               <p className="text-zinc-300 text-base md:text-lg leading-relaxed max-w-sm">
-                Berbasis di Yogyakarta, Indonesia. Saat ini terbuka untuk
+                Saat ini sedang berada di Yogyakarta, Indonesia. Selalu terbuka untuk
                 mendiskusikan peluang proyek, kolaborasi desain, dan
-                pengembangan antarmuka web/mobile.
+                pengembangan antarmuka web maupun mobile.
               </p>
             </div>
           </div>
@@ -137,9 +137,9 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-2">
             <span>Built with</span>
-            <span className="text-zinc-400">React</span>
+            <span className="text-zinc-400">coffee</span>
             <span>&</span>
-            <span className="text-zinc-400">Tailwind</span>
+            <span className="text-zinc-400">love</span>
           </div>
         </div>
       </div>

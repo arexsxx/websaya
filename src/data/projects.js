@@ -23,8 +23,8 @@ export const projects = [
   {
     id: 4,
     year: "2026",
-    title: "Daur Cuan – Modern Rental property Platform",
-    image: "/src/assets/images/project3.png",
-    link: "/project/daurCuan",
+    title: "Daur Cuan – Platform Pengelolaan Sampah Berbasis Gamified Crowdsourcing",
+    image: "/src/assets/images/daurcuan/daurcuan.webp",
+    link: "/project/DaurCuan",
   },
 ];

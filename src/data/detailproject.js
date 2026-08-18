@@ -49,8 +49,7 @@ export const detailProjects = [
     timeline: "2025",
     tech: "Figma, Design System, User Research, Prototyping",
     platform: "Mobile App Design",
-    heroImage:
-      "/src/assets/images/kawaan/kawaan1.webp",
+    heroImage: "/src/assets/images/kawaan/kawaan1.webp",
     overview:
       "Kawaan adalah desain aplikasi seluler berbasis AI yang dikembangkan untuk membantu pelajar SMA dan mahasiswa dalam menemukan potensi diri, mengeksplorasi jalur karier, dan membangun keterampilan siap kerja melalui gamifikasi, chatbot interaktif, serta pembuatan CV otomatis. Meraih Juara 1 pada Kompetisi UI/UX tingkat nasional yang diadakan Universitas Muhammadiyah Tanggerang.",
     problem:
@@ -62,8 +61,7 @@ export const detailProjects = [
         title: "Personalized Career Path",
         description:
           "Alur pemilihan karir yang intuitif untuk menangkap kekuatan dan minat pengguna sejak awal penggunaan aplikasi.",
-        image:
-          "/src/assets/images/kawaan/kawaan3.webp",
+        image: "/src/assets/images/kawaan/kawaan3.webp",
       },
       {
         title: "Gamified Learning Interface",
@@ -81,8 +79,7 @@ export const detailProjects = [
         title: "Daily Journal & Missions",
         description:
           "Tampilan pencatatan harian dan papan misi terstruktur dengan lencana penghargaan untuk mendorong kebiasaan positif dan konsistensi.",
-        image:
-          "/src/assets/images/kawaan/kawaan1.webp",
+        image: "/src/assets/images/kawaan/kawaan1.webp",
       },
     ],
     nextProject: {
@@ -97,8 +94,7 @@ export const detailProjects = [
     timeline: "2026",
     tech: "Figma, Design System, Prototyping",
     platform: "Mobile App",
-    heroImage:
-      "/src/assets/images/rentverse/main.webp",
+    heroImage: "/src/assets/images/rentverse/main.webp",
     overview:
       "Rentverse adalah platform digital modern yang dirancang untuk memudahkan pengguna dalam menyewa berbagai kebutuhan atau properti secara efisien, aman, dan transparan dalam satu ekosistem terintegrasi.",
     problem:
@@ -110,22 +106,19 @@ export const detailProjects = [
         title: "Seamless Authentication",
         description:
           "Merancang onboarding yang minimalis dengan opsi OAuth untuk mengurangi cognitive load, memastikan pengguna dapat mulai menjelajahi platform dengan langkah sesedikit mungkin.",
-        image:
-          "/src/assets/images/rentverse/rent_auth.webp",
+        image: "/src/assets/images/rentverse/rent_auth.webp",
       },
       {
         title: "Advanced Search & Filter",
         description:
           "Sistem pencarian dan filter kategori yang cmemudahkan pengguna menemukan barang atau properti impian berdasarkan lokasi, harga, dan ketersediaan secara real-time.",
-        image:
-          "/src/assets/images/rentverse/search.webp",
+        image: "/src/assets/images/rentverse/search.webp",
       },
       {
         title: "Seamless Booking Flow",
         description:
           "Alur pemesanan yang disederhanakan dari pemilihan jadwal hingga konfirmasi pembayaran untuk mengurangi kebingungan dan meningkatkan konversi pengguna.",
-        image:
-          "/src/assets/images/rentverse/booking.webp",
+        image: "/src/assets/images/rentverse/booking.webp",
       },
     ],
     nextProject: {
@@ -141,10 +134,9 @@ export const detailProjects = [
     timeline: "2026",
     tech: "Figma, Design System, User Research, Prototyping",
     platform: "Mobile App",
-    heroImage:
-      "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=2370&auto=format&fit=crop",
+    heroImage: "/src/assets/images/daurcuan/mainDaur.webp",
     overview:
-      "DaurCuan adalah platform pengelolaan sampah berbasis gamified crowdsourcing yang berhasil meraih Juara 2 Nasional UI/UX Design, dirancang untuk Generasi Z (usia 15–25 tahun), mahasiswa, pelajar, serta mitra bank sampah",
+      "DaurCuan adalah platform pengelolaan sampah berbasis gamified crowdsourcing yang berhasil meraih Juara 2 Nasional UI/UX Design. Inti dari inovasi DaurCuan terletak pada penciptaan ekosistem ekonomi sirkular digital yang membagi penggunanya ke dalam dua peran yang saling melengkapi: Feeder dan Hunter. Dengan pendekatan gamifikasi, seperti sistem poin, penyelesaian misi, dan reward. DaurCuan memecahkan masalah logistik pengumpulan sampah dengan cara yang sangat relevan dan menarik bagi gaya hidup anak muda",
     problem:
       "Terdapat 11,3 juta ton sampah di Indonesia yang tidak terkelola dengan baik dan 92% masyarakat sadar akan isu lingkungan namun masih minim aksi nyata, diperparah oleh hambatan psikologis Gen-Z ('mager') terhadap sistem konvensional.",
     approach:
@@ -154,36 +146,31 @@ export const detailProjects = [
         title: "AI Smart Scanner",
         description:
           "Fitur pemindai berbasis AI untuk mendeteksi jenis sampah anorganik kering serta memberikan estimasi poin atau reward secara instan melalui foto.",
-        image:
-          "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=2564&auto=format&fit=crop",
+        image: "/src/assets/images/daurcuan/scan.webp",
       },
       {
         title: "Gamified Pet System",
         description:
           "Mengubah aktivitas membuang sampah menjadi permainan dengan merawat, memberi makan, dan mengembangkan maskot virtual bernama 'ScrapZilla' lewat setoran sampah secara rutin.",
-        image:
-          "https://images.unsplash.com/photo-1604187351574-c75ca79f5807?q=80&w=1200&auto=format&fit=crop",
+        image: "/src/assets/images/daurcuan/dino.webp",
       },
       {
         title: "Community Crowdsourcing",
         description:
           "Sistem logistik User-to-User yang fleksibel sebagai penghubung langsung antara Feeder (penyetor sampah) dan Hunter (pengambil sampah) tanpa perantara atau armada resmi.",
-        image:
-          "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop",
+        image: "/src/assets/images/daurcuan/usertouser.webp",
       },
       {
         title: "Real Money Reward & Redeem",
         description:
           "Memungkinkan pengguna menukar aset sampah langsung menjadi saldo dompet digital E-Wallet seperti ShopeePay atau potongan harga merchant favorit.",
-        image:
-          "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop",
+        image: "/src/assets/images/daurcuan/redeem.webp",
       },
       {
         title: "Leaderboard & Social",
         description:
           "Sistem papan peringkat lokal dan challenge mingguan untuk memacu motivasi, kompetisi sehat, serta memberikan lencana penghargaan bagi pengguna.",
-        image:
-          "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop",
+        image: "/src/assets/images/daurcuan/rank.webp",
       },
     ],
     nextProject: {
