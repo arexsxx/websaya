@@ -6,7 +6,7 @@ export const detailProjects = [
     timeline: "2026",
     tech: "Nextjs, Supabase, Vercel",
     platform: "Web-based (Responsive Design)",
-    heroImage: "/src/assets/images/brocleanx/brocleanx4.webp",
+    heroImage: "/assets/images/brocleanx/brocleanx4.webp",
 
     // STRUKTUR DATA BARU YANG LEBIH KAYA
     overview:
@@ -21,19 +21,19 @@ export const detailProjects = [
         title: "Service Tiers Display",
         description:
           "Segmentasi harga yang jelas (Medium, Deep, Hard, Express) untuk transparansi informasi.",
-        image: "/src/assets/images/brocleanx/brocleanx1.webp",
+        image: "/assets/images/brocleanx/brocleanx1.webp",
       },
       {
         title: "Responsive Layout",
         description:
           "Tataletak yang dioptimalkan agar nyaman diakses dari berbagai perangkat",
-        image: "/src/assets/images/brocleanx/brocleanx3.webp",
+        image: "/assets/images/brocleanx/brocleanx3.webp",
       },
       {
         title: "Direct WhatsApp Integration",
         description:
           "Tombol aksi cepat terhubung langsung ke admin untuk memangkas user journey.",
-        image: "/src/assets/images/brocleanx/brocleanx2.webp",
+        image: "/assets/images/brocleanx/brocleanx2.webp",
       },
     ],
 
@@ -49,7 +49,7 @@ export const detailProjects = [
     timeline: "2025",
     tech: "Figma, Design System, User Research, Prototyping",
     platform: "Mobile App Design",
-    heroImage: "/src/assets/images/kawaan/kawaan1.webp",
+    heroImage: "/assets/images/kawaan/kawaan1.webp",
     overview:
       "Kawaan adalah desain aplikasi seluler berbasis AI yang dikembangkan untuk membantu pelajar SMA dan mahasiswa dalam menemukan potensi diri, mengeksplorasi jalur karier, dan membangun keterampilan siap kerja melalui gamifikasi, chatbot interaktif, serta pembuatan CV otomatis. Meraih Juara 1 pada Kompetisi UI/UX tingkat nasional yang diadakan Universitas Muhammadiyah Tanggerang.",
     problem:
@@ -61,25 +61,25 @@ export const detailProjects = [
         title: "Personalized Career Path",
         description:
           "Alur pemilihan karir yang intuitif untuk menangkap kekuatan dan minat pengguna sejak awal penggunaan aplikasi.",
-        image: "/src/assets/images/kawaan/kawaan3.webp",
+        image: "/assets/images/kawaan/kawaan3.webp",
       },
       {
         title: "Gamified Learning Interface",
         description:
           "Antarmuka kuis interaktif dan materi gigih dengan sistem perolehan poin XP serta streak harian untuk menjaga keterlibatan pengguna.",
-        image: "/src/assets/images/kawaan/kawaan4.webp",
+        image: "/assets/images/kawaan/kawaan4.webp",
       },
       {
         title: "AI Chatbot — Dino UI",
         description:
           "Desain antarmuka asisten percakapan yang ramah, suportif, dan empatik untuk mendampingi diskusi pengembangan diri serta eksplorasi karier.",
-        image: "/src/assets/images/kawaan/kawaan2.webp",
+        image: "/assets/images/kawaan/kawaan2.webp",
       },
       {
         title: "Daily Journal & Missions",
         description:
           "Tampilan pencatatan harian dan papan misi terstruktur dengan lencana penghargaan untuk mendorong kebiasaan positif dan konsistensi.",
-        image: "/src/assets/images/kawaan/kawaan1.webp",
+        image: "/assets/images/kawaan/kawaan1.webp",
       },
     ],
     nextProject: {
@@ -94,7 +94,7 @@ export const detailProjects = [
     timeline: "2026",
     tech: "Figma, Design System, Prototyping",
     platform: "Mobile App",
-    heroImage: "/src/assets/images/rentverse/main.webp",
+    heroImage: "/assets/images/rentverse/main.webp",
     overview:
       "Rentverse adalah platform digital modern yang dirancang untuk memudahkan pengguna dalam menyewa berbagai kebutuhan atau properti secara efisien, aman, dan transparan dalam satu ekosistem terintegrasi.",
     problem:
@@ -106,19 +106,19 @@ export const detailProjects = [
         title: "Seamless Authentication",
         description:
           "Merancang onboarding yang minimalis dengan opsi OAuth untuk mengurangi cognitive load, memastikan pengguna dapat mulai menjelajahi platform dengan langkah sesedikit mungkin.",
-        image: "/src/assets/images/rentverse/rent_auth.webp",
+        image: "/assets/images/rentverse/rent_auth.webp",
       },
       {
         title: "Advanced Search & Filter",
         description:
           "Sistem pencarian dan filter kategori yang cmemudahkan pengguna menemukan barang atau properti impian berdasarkan lokasi, harga, dan ketersediaan secara real-time.",
-        image: "/src/assets/images/rentverse/search.webp",
+        image: "/assets/images/rentverse/search.webp",
       },
       {
         title: "Seamless Booking Flow",
         description:
           "Alur pemesanan yang disederhanakan dari pemilihan jadwal hingga konfirmasi pembayaran untuk mengurangi kebingungan dan meningkatkan konversi pengguna.",
-        image: "/src/assets/images/rentverse/booking.webp",
+        image: "/assets/images/rentverse/booking.webp",
       },
     ],
     nextProject: {
@@ -134,7 +134,7 @@ export const detailProjects = [
     timeline: "2026",
     tech: "Figma, Design System, User Research, Prototyping",
     platform: "Mobile App",
-    heroImage: "/src/assets/images/daurcuan/mainDaur.webp",
+    heroImage: "/assets/images/daurcuan/mainDaur.webp",
     overview:
       "DaurCuan adalah platform pengelolaan sampah berbasis gamified crowdsourcing yang berhasil meraih Juara 2 Nasional UI/UX Design. Inti dari inovasi DaurCuan terletak pada penciptaan ekosistem ekonomi sirkular digital yang membagi penggunanya ke dalam dua peran yang saling melengkapi: Feeder dan Hunter. Dengan pendekatan gamifikasi, seperti sistem poin, penyelesaian misi, dan reward. DaurCuan memecahkan masalah logistik pengumpulan sampah dengan cara yang sangat relevan dan menarik bagi gaya hidup anak muda",
     problem:
@@ -146,31 +146,31 @@ export const detailProjects = [
         title: "AI Smart Scanner",
         description:
           "Fitur pemindai berbasis AI untuk mendeteksi jenis sampah anorganik kering serta memberikan estimasi poin atau reward secara instan melalui foto.",
-        image: "/src/assets/images/daurcuan/scan.webp",
+        image: "/assets/images/daurcuan/scan.webp",
       },
       {
         title: "Gamified Pet System",
         description:
           "Mengubah aktivitas membuang sampah menjadi permainan dengan merawat, memberi makan, dan mengembangkan maskot virtual bernama 'ScrapZilla' lewat setoran sampah secara rutin.",
-        image: "/src/assets/images/daurcuan/dino.webp",
+        image: "/assets/images/daurcuan/dino.webp",
       },
       {
         title: "Community Crowdsourcing",
         description:
           "Sistem logistik User-to-User yang fleksibel sebagai penghubung langsung antara Feeder (penyetor sampah) dan Hunter (pengambil sampah) tanpa perantara atau armada resmi.",
-        image: "/src/assets/images/daurcuan/usertouser.webp",
+        image: "/assets/images/daurcuan/usertouser.webp",
       },
       {
         title: "Real Money Reward & Redeem",
         description:
           "Memungkinkan pengguna menukar aset sampah langsung menjadi saldo dompet digital E-Wallet seperti ShopeePay atau potongan harga merchant favorit.",
-        image: "/src/assets/images/daurcuan/redeem.webp",
+        image: "/assets/images/daurcuan/redeem.webp",
       },
       {
         title: "Leaderboard & Social",
         description:
           "Sistem papan peringkat lokal dan challenge mingguan untuk memacu motivasi, kompetisi sehat, serta memberikan lencana penghargaan bagi pengguna.",
-        image: "/src/assets/images/daurcuan/rank.webp",
+        image: "/assets/images/daurcuan/rank.webp",
       },
     ],
     nextProject: {

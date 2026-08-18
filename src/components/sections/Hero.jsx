@@ -31,7 +31,7 @@ export default function Hero() {
       <motion.div
         className="absolute inset-0 w-full h-[120%] bg-center bg-cover bg-no-repeat"
         style={{
-          backgroundImage: "url('src/assets/images/bg.webp')",
+          backgroundImage: "url('assets/images/bg.webp')",
           y: yBg,
         }}
       />
@@ -45,7 +45,7 @@ export default function Hero() {
           designer.
         </h1> */}
         <img
-          src="src/assets/logo/logo-white.webp"
+          src="assets/logo/logo-white.webp"
           alt="Hero Image"
           className="w-full h-auto object-cover opacity-2"
         />

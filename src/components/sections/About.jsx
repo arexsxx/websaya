@@ -6,7 +6,6 @@ export default function About() {
     <section id="about" className="relative z-10">
       {/* max-w saya sesuaikan jadi [1400px] agar tidak error di Tailwind */}
       <div className="max-w-350 mx-auto px-6 md:px-16 lg:px-32">
-        
         {/* HEADER SECTION (Aksen Biru) */}
         <FadeIn direction="up" delay={0.1}>
           <h1 className="text-4xl md:text-6xl lg:text-[4rem] font-bold tracking-tight leading-[1.05] mb-12 md:mb-28 max-w-5xl">
@@ -18,14 +17,11 @@ export default function About() {
         </FadeIn>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
-          
           {/* KOLOM KIRI: FOTO PROFIL & MARQUEE LOGO */}
           {/* h-full penting agar kolom kiri memanjang ke bawah mengikuti teks di kanan */}
           <div className="lg:col-span-5 h-full relative">
-            
             {/* PERBAIKAN MUTLAK: sticky HARUS ditaruh di div murni paling luar */}
             <div className="sticky top-32">
-              
               {/* FadeIn HARUS berada di DALAM sticky, tidak boleh sebaliknya! */}
               <FadeIn direction="up" delay={0.2}>
                 <div className="relative z-10 group">
@@ -35,7 +31,7 @@ export default function About() {
                   {/* CONTAINER FOTO & LOGO BERJALAN */}
                   <div className="relative z-10 flex flex-col shadow-2xl shadow-black/50 rounded-xl md:rounded-2xl overflow-hidden border border-zinc-800/50">
                     <img
-                      src="src/assets/images/me.webp"
+                      src="assets/images/me.webp"
                       alt="Ervin Khoirus Syifa' Uddin"
                       className="w-full aspect-3/4 md:aspect-4/5 object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                     />
@@ -44,15 +40,38 @@ export default function About() {
                     <div className="bg-zinc-950/80 backdrop-blur-md py-5 md:py-6 overflow-hidden flex border-t border-zinc-800/80 group-hover:border-blue-500/30 transition-colors">
                       <motion.div
                         animate={{ x: ["0%", "-50%"] }}
-                        transition={{ ease: "linear", duration: 24, repeat: Infinity }}
+                        transition={{
+                          ease: "linear",
+                          duration: 24,
+                          repeat: Infinity,
+                        }}
                         className="flex w-max shrink-0 items-center"
                       >
                         {[...Array(4)].map((_, i) => (
-                          <div key={i} className="flex gap-12 md:gap-16 items-center px-6 md:px-8 shrink-0">
-                            <img src="src/assets/logo/logo brocleanx.webp" alt="Brocleanx" className="h-6 md:h-7 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer" />
-                            <img src="src/assets/logo/logo kawaan.webp" alt="Kawaan" className="h-6 md:h-7 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer" />
-                            <img src="src/assets/logo/daurcuan-logo.webp" alt="DaurCuan" className="h-6 md:h-7 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer" />
-                            <img src="src/assets/logo/logo-rent.webp" alt="Rentverse" className="h-6 md:h-7 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer" />
+                          <div
+                            key={i}
+                            className="flex gap-12 md:gap-16 items-center px-6 md:px-8 shrink-0"
+                          >
+                            <img
+                              src="assets/logo/logo brocleanx.webp"
+                              alt="Brocleanx"
+                              className="h-6 md:h-7 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer"
+                            />
+                            <img
+                              src="assets/logo/logo kawaan.webp"
+                              alt="Kawaan"
+                              className="h-6 md:h-7 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer"
+                            />
+                            <img
+                              src="assets/logo/daurcuan-logo.webp"
+                              alt="DaurCuan"
+                              className="h-6 md:h-7 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer"
+                            />
+                            <img
+                              src="assets/logo/logo-rent.webp"
+                              alt="Rentverse"
+                              className="h-6 md:h-7 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer"
+                            />
                           </div>
                         ))}
                       </motion.div>
@@ -60,13 +79,11 @@ export default function About() {
                   </div>
                 </div>
               </FadeIn>
-              
             </div>
           </div>
 
           {/* KOLOM KANAN: KONTEN, SKILLS, DAN AWARDS (TIDAK ADA YANG DIUBAH) */}
           <div className="lg:col-span-7 flex flex-col justify-start pt-4">
-            
             <FadeIn direction="up" delay={0.3}>
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
                 UI/UX & Product Designer
@@ -176,7 +193,6 @@ export default function About() {
                 </div>
               </div>
             </FadeIn>
-            
           </div>
         </div>
       </div>

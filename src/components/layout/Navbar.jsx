@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [isMobileOpen, setIsMobileOpen] = useState(false); 
-  
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+
   const location = useLocation();
   const pathname = location.pathname;
   const isHome = pathname === "/";
@@ -40,7 +40,7 @@ export default function Navbar() {
 
   // Fungsi khusus untuk menu anchor (Projects & Contact)
   const handleAnchorClick = (e, targetId) => {
-    setIsMobileOpen(false); 
+    setIsMobileOpen(false);
 
     if (isHome) {
       e.preventDefault();
@@ -58,12 +58,15 @@ export default function Navbar() {
   // FUNGSI BARU: Fungsi khusus untuk menangani klik Logo
   const handleLogoClick = (e) => {
     setIsMobileOpen(false); // Tutup menu mobile jika sedang terbuka
-    
+
     // Jika sedang di halaman Home, paksa scroll kembali ke paling atas (0)
     if (isHome) {
       e.preventDefault();
       if (window.lenis) {
-        window.lenis.scrollTo(0, { duration: 1.5, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+        window.lenis.scrollTo(0, {
+          duration: 1.5,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
       } else {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
@@ -76,21 +79,20 @@ export default function Navbar() {
       // Mendaftarkan referensi di sini untuk mendeteksi area navbar
       ref={navRef}
       className={`fixed w-full top-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? "bg-zinc-950/80 backdrop-blur-md border-b border-zinc-900/50 py-4" 
+        scrolled
+          ? "bg-zinc-950/80 backdrop-blur-md border-b border-zinc-900/50 py-4"
           : "bg-transparent py-6 md:py-10"
       }`}
     >
       <div className="max-w-350 mx-auto px-6 md:px-16 lg:px-32 flex justify-between items-center">
-        
         {/* LOGO */}
-        <Link 
-          to="/" 
-          onClick={handleLogoClick} 
+        <Link
+          to="/"
+          onClick={handleLogoClick}
           className="text-2xl font-bold text-white tracking-tighter z-50 cursor-pointer"
         >
           <img
-            src="/src/assets/logo/logo-white.webp" 
+            src="/assets/logo/logo-white.webp"
             alt="Logo"
             className="h-6 w-auto object-contain"
           />
@@ -132,17 +134,37 @@ export default function Navbar() {
         </div>
 
         {/* TOMBOL HAMBURGER MOBILE */}
-        <button 
+        <button
           className="md:hidden text-zinc-400 hover:text-white focus:outline-none z-50 transition-colors p-1 -mr-1"
           onClick={() => setIsMobileOpen(!isMobileOpen)}
         >
           {isMobileOpen ? (
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
           ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -152,22 +174,22 @@ export default function Navbar() {
       </div>
 
       {/* DROPDOWN MENU MOBILE */}
-      <div 
+      <div
         className={`md:hidden absolute top-full left-0 w-full bg-zinc-950/95 backdrop-blur-xl border-b border-zinc-900 transition-all duration-300 ease-in-out overflow-hidden ${
           isMobileOpen ? "max-h-100 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="flex flex-col px-6 py-6 gap-6 text-base font-medium shadow-2xl">
           {!isHome && (
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               onClick={() => setIsMobileOpen(false)}
               className="text-zinc-400 hover:text-white transition-colors"
             >
               Home
             </Link>
           )}
-          
+
           <Link
             to="/about"
             onClick={() => setIsMobileOpen(false)}
