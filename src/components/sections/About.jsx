@@ -106,7 +106,7 @@ export default function About() {
               </p>
 
               <a
-                href="src/assets/doc/ervin_res.pdf"
+                href="/assets/doc/ervin_res.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center px-10 py-4 bg-white text-zinc-950 font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 mb-24"

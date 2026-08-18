@@ -47,7 +47,7 @@ export default function Hero() {
         <img
           src="assets/logo/logo-white.webp"
           alt="Hero Image"
-          className="w-full h-auto object-cover opacity-2"
+          className="w-full h-auto object-cover opacity-3"
         />
       </div>
 
