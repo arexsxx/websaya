@@ -70,7 +70,7 @@ function AppContent() {
   if (isLoading) return <LoadingScreen />;
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white selection:bg-blue-500/30 selection:text-blue-200 flex flex-col relative">
+    <div className="min-h-screen bg-zinc-950 text-white selection:bg-zinc-950 selection:text-blue-200 flex flex-col relative">
       <ScrollHandler />
       <Navbar />
 

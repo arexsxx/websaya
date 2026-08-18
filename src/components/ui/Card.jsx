@@ -22,18 +22,18 @@ export default function Card({ title, year, image, link }) {
           {year}
         </span>
 
-        {/* Judul Proyek (Menghapus mb-6 menjadi mb-0 agar tidak terlalu jauh dengan teks View Case Study) */}
+        {/* Judul Proyek */}
         <h3 className="text-2xl md:text-4xl font-bold text-white leading-[1.2] max-w-sm">
           {title}
         </h3>
 
         {/* 
-          ANIMASI "VIEW CASE STUDY" DIPINDAH KE SINI 
-          Tepat di bawah judul. Class mt-auto dihapus dan diganti dengan mt-6 
-          sebagai jarak (margin top) dari judul utama.
+          ANIMASI "VIEW CASE STUDY" 
+          Perbaikan: translate-y-0 opacity-100 untuk mobile.
+          Untuk layar besar (md:), diubah menjadi sembunyi dulu dan muncul saat di-hover.
         */}
         <div className="overflow-hidden mt-6">
-          <div className="flex items-center gap-3 text-white font-medium text-sm md:text-base translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] delay-75">
+          <div className="flex items-center gap-3 text-white font-medium text-sm md:text-base translate-y-0 opacity-100 md:translate-y-full md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] delay-75">
             <span>View Case Study</span>
             <span className="text-xl leading-none font-light">→</span>
           </div>

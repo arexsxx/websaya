@@ -11,7 +11,7 @@ export default function AboutPage() {
       {/* FIXED BACKGROUND IMAGE */}
       <div
         className="fixed inset-0 w-full h-full bg-center bg-cover bg-no-repeat z-0"
-        style={{ backgroundImage: "url('assets/images/bg.webp')" }}
+        style={{ backgroundImage: "url('/assets/images/bg.webp')" }}
       ></div>
 
       {/* DARK OVERLAY (Sangat penting agar teks putih tetap terbaca) */}
