@@ -154,7 +154,7 @@ export default function Hero() {
             </svg>
           </a>
           <a
-            href="https://instagram.com/ervin_khoirus"
+            href="https://instagram.com/omcipakproject"
             target="_blank"
             rel="noreferrer"
             className="text-zinc-500 hover:text-blue-500 hover:scale-110 transition-all duration-300"

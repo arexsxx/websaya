@@ -72,7 +72,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://instagram.com/ervin_khoirus"
+                  href="https://instagram.com/omcipakproject"
                   target="_blank"
                   rel="noreferrer"
                   className="text-zinc-400 hover:text-white transition-colors relative group"

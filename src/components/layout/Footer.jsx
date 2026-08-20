@@ -107,7 +107,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://instagram.com/ervin_khoirus"
+                  href="https://instagram.com/omcipakproject"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-blue-500 transition-colors inline-block hover:translate-x-1 transform duration-300"
