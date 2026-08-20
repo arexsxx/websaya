@@ -7,7 +7,10 @@ export default function Hero() {
 
   // Efek parallax saat hero tertutup oleh section bawahnya
   const yBg = useTransform(scrollY, [0, 800], [0, 150]);
-  const yText = useTransform(scrollY, [0, 500], [0, 100]);
+
+  // PERBAIKAN: Mengubah nilai positif menjadi NEGATIF agar elemen melayang naik ke atas
+  const yText = useTransform(scrollY, [0, 500], [0, -250]);
+  const yWatermark = useTransform(scrollY, [0, 500], [0, -150]);
   const opacityText = useTransform(scrollY, [0, 400], [1, 0]);
 
   const handleAnchorClick = (e, targetId) => {
@@ -23,7 +26,6 @@ export default function Hero() {
   };
 
   return (
-    // PERUBAHAN KUNCI: Menggunakan sticky top-0 agar tertahan di layar
     <section
       id="hero"
       className="sticky top-0 h-screen w-full overflow-hidden z-0"
@@ -38,18 +40,20 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-zinc-950/85 z-0"></div>
 
-      {/* <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-blue-600/10 rounded-full blur-[120px] z-0 pointer-events-none"></div> */}
-
-      <div className="absolute top-0 left-0 w-full pt-28 md:pt-32 px-6 md:px-16 lg:px-32 pointer-events-none z-0">
-        {/* <h1 className="text-[28vw] md:text-[22vw] lg:text-[24vw] font-black text-white/3 tracking-tighter leading-[0.8] select-none -ml-1 md:-ml-2">
-          designer.
-        </h1> */}
+      {/* 
+        PERBAIKAN: div biasa diubah menjadi motion.div 
+        Lalu ditambahkan properti style agar ikut naik (yWatermark) dan memudar (opacityText)
+      */}
+      <motion.div
+        className="absolute top-0 left-0 w-full pt-28 md:pt-32 px-6 md:px-16 lg:px-32 pointer-events-none z-0"
+        style={{ y: yWatermark, opacity: opacityText }}
+      >
         <img
           src="assets/logo/logo-white.webp"
           alt="Hero Image"
           className="w-full h-auto object-cover opacity-3"
         />
-      </div>
+      </motion.div>
 
       <motion.div
         className="absolute bottom-6 left-0 w-full pb-16 md:pb-20 lg:pb-28 px-6 md:px-16 lg:px-32 z-10"

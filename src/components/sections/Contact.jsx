@@ -15,7 +15,7 @@ export default function Contact() {
       ></div>
 
       {/* 2. DARK OVERLAY (Agar teks putih tetap kontras dan mudah dibaca) */}
-      <div className="absolute inset-0 bg-zinc-950/85 z-0"></div>
+      {/* <div className="absolute inset-0 bg-zinc-950 z-0"></div> */}
 
       {/* KONTEN UTAMA (Relative z-10 agar berada di atas gambar background) */}
       <div className="max-w-350 mx-auto relative z-10">

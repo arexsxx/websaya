@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Lenis from "lenis";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-import LoadingScreen from "./components/LoadingScreen";
+// Pastikan path import LoadingScreen ini sesuai dengan folder Anda
+import LoadingScreen from "./components/LoadingScreen"; 
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import ProjectDetail from "./pages/ProjectDetail";
@@ -42,16 +43,18 @@ function AppContent() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2000);
+    // Timeout disesuaikan agar pas dengan animasi garis biru (sekitar 1 detik)
+    const timer = setTimeout(() => setIsLoading(false), 1200);
 
+    // ========================================================
+    // PERBAIKAN LENIS SCROLL: Menggunakan lerp agar super ringan
+    // ========================================================
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
+      lerp: 0.08, // Mengatur seberapa licin momentumnya (0.05 - 0.1 adalah yang terbaik)
       smoothWheel: true,
+      wheelMultiplier: 1, // Kecepatan scroll standar
     });
 
-    // Menggunakan (window as any) untuk menghindari error TypeScript
     (window as any).lenis = lenis;
 
     function raf(time: number) {
