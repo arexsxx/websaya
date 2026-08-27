@@ -5,10 +5,10 @@ import { projects } from "../../data/projects";
 
 export default function Projects() {
   return (
-    // PERBAIKAN: Menghapus shadow raksasa yang menyiksa GPU
     <section
       id="projects"
-      className="py-32 px-4 md:px-8 relative z-20 bg-zinc-950 border-t border-zinc-800/80"
+      // KELAS border-t dan border-zinc-800/80 SUDAH DIHAPUS DI SINI
+      className="py-32 px-4 md:px-8 relative z-20 bg-zinc-950"
     >
       <div className="max-w-350 mx-auto px-6 md:px-16 lg:px-32">
         <SectionTitle subtitle="Selected Projects" title="Case studies" />

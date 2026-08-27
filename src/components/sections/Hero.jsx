@@ -5,13 +5,8 @@ import FadeIn from "../ui/FadeIn";
 export default function Hero() {
   const { scrollY } = useScroll();
 
-  // Efek parallax saat hero tertutup oleh section bawahnya
-  const yBg = useTransform(scrollY, [0, 800], [0, 150]);
-
-  // PERBAIKAN: Mengubah nilai positif menjadi NEGATIF agar elemen melayang naik ke atas
-  const yText = useTransform(scrollY, [0, 500], [0, -250]);
-  const yWatermark = useTransform(scrollY, [0, 500], [0, -150]);
-  const opacityText = useTransform(scrollY, [0, 400], [1, 0]);
+  // Efek parallax SANGAT RINGAN: Hanya background yang sedikit bergeser
+  const yBg = useTransform(scrollY, [0, 1000], [0, 200]);
 
   const handleAnchorClick = (e, targetId) => {
     e.preventDefault();
@@ -26,14 +21,16 @@ export default function Hero() {
   };
 
   return (
+    // PERBAIKAN KUNCI: Mengubah "sticky top-0" menjadi "relative"
+    // Ini menghilangkan efek tumpukan (layering) penyebab ngelag!
     <section
       id="hero"
-      className="sticky top-0 h-screen w-full overflow-hidden z-0"
+      className="relative h-screen w-full overflow-hidden z-0"
     >
       <motion.div
-        className="absolute inset-0 w-full h-[120%] bg-center bg-cover bg-no-repeat"
+        className="absolute inset-0 w-full h-[120%] bg-center bg-cover bg-no-repeat will-change-transform"
         style={{
-          backgroundImage: "url('assets/images/bg.webp')",
+          backgroundImage: "url('assets/images/baground.webp')",
           y: yBg,
         }}
       />
@@ -41,24 +38,19 @@ export default function Hero() {
       <div className="absolute inset-0 bg-zinc-950/85 z-0"></div>
 
       {/* 
-        PERBAIKAN: div biasa diubah menjadi motion.div 
-        Lalu ditambahkan properti style agar ikut naik (yWatermark) dan memudar (opacityText)
+        Logo Watermark dan Teks sekarang dibungkus div biasa (bukan motion.div).
+        Karena section-nya sudah "relative", elemen-elemen ini otomatis akan 
+        naik ke atas dengan sangat mulus saat halaman di-scroll (tanpa membebani GPU).
       */}
-      <motion.div
-        className="absolute top-0 left-0 w-full pt-28 md:pt-32 px-6 md:px-16 lg:px-32 pointer-events-none z-0"
-        style={{ y: yWatermark, opacity: opacityText }}
-      >
+      <div className="absolute top-0 left-0 w-full pt-28 md:pt-32 px-6 md:px-16 lg:px-32 pointer-events-none z-0">
         <img
           src="assets/logo/logo-white.webp"
           alt="Hero Image"
           className="w-full h-auto object-cover opacity-3"
         />
-      </motion.div>
+      </div>
 
-      <motion.div
-        className="absolute bottom-6 left-0 w-full pb-16 md:pb-20 lg:pb-28 px-6 md:px-16 lg:px-32 z-10"
-        style={{ y: yText, opacity: opacityText }}
-      >
+      <div className="absolute bottom-6 left-0 w-full pb-16 md:pb-20 lg:pb-28 px-6 md:px-16 lg:px-32 z-10">
         <div className="max-w-xl">
           <FadeIn delay={0.1} direction="up" triggerOnLoad={true}>
             <p className="text-zinc-400 font-medium mb-5 tracking-[0.3em] uppercase text-[9px] md:text-[10px]">
@@ -105,7 +97,7 @@ export default function Hero() {
             </div>
           </FadeIn>
         </div>
-      </motion.div>
+      </div>
 
       <div className="absolute right-6 md:right-12 lg:right-16 top-0 h-full py-16 md:py-20 flex flex-col justify-between items-center z-20 pointer-events-none">
         <div className="hidden md:block h-24"></div>
@@ -194,7 +186,7 @@ export default function Hero() {
           </span>
           <div className="w-px h-12 md:h-20 bg-zinc-800 relative overflow-hidden">
             <motion.div
-              className="w-full h-full bg-blue-500 absolute top-0 left-0"
+              className="w-full h-full bg-blue-500 absolute top-0 left-0 will-change-transform"
               animate={{ y: ["-100%", "100%"] }}
               transition={{
                 duration: 1.5,

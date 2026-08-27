@@ -1,21 +1,41 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import SectionTitle from "../ui/SectionTitle";
 import FadeIn from "../ui/FadeIn";
 
 export default function Contact() {
+  const containerRef = useRef(null);
+
+  // Memantau pergerakan scroll HANYA saat bagian Contact ini muncul di layar
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Efek parallax halus: Gambar akan bergerak sedikit dari atas ke bawah
+  const yBg = useTransform(scrollYProgress, [0, 1], ["-50px", "50px"]);
+
   return (
     <section
       id="contact"
+      ref={containerRef}
       // Mengurangi padding (tinggi) dari py-32 menjadi py-16 md:py-24
       className="py-16 md:py-24 px-4 md:px-8 relative z-10 border-t border-zinc-800/50 overflow-hidden"
     >
-      {/* 1. GAMBAR BACKGROUND SEPERTI HERO SECTION */}
-      <div
-        className="absolute inset-0 w-full h-full bg-center bg-cover bg-no-repeat z-0"
-        style={{ backgroundImage: "url('/src/assets/images/bg.webp')" }}
-      ></div>
+      {/* 1. GAMBAR BACKGROUND DENGAN ANIMASI PARALLAX ALA HERO SECTION */}
+      {/* h-[120%] dan -top-[10%] memastikan gambar memiliki ruang ekstra agar tepi gambarnya tidak terpotong saat bergerak */}
+      <motion.div
+        className="absolute top-[-10%] left-0 w-full h-[120%] bg-center bg-cover bg-no-repeat z-0 will-change-transform"
+        style={{
+          // Pastikan path gambarnya sesuai (menggunakan path yang aman untuk build Vercel seperti di Hero)
+          backgroundImage: "url('assets/images/baground.webp')",
+          y: yBg,
+        }}
+      />
 
-      {/* 2. DARK OVERLAY (Agar teks putih tetap kontras dan mudah dibaca) */}
-      {/* <div className="absolute inset-0 bg-zinc-950 z-0"></div> */}
+      {/* 2. DARK OVERLAY */}
+      {/* Diaktifkan kembali dengan transparansi /85 agar seragam dengan Hero section */}
+      <div className="absolute inset-0 bg-zinc-950/85 z-0"></div>
 
       {/* KONTEN UTAMA (Relative z-10 agar berada di atas gambar background) */}
       <div className="max-w-350 mx-auto relative z-10">
@@ -44,7 +64,6 @@ export default function Contact() {
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=ervinkhoirus@gmail.com"
                 target="_blank"
                 rel="noreferrer"
-                // href="mailto:ervinkhoirus@gmail.com"
                 className="inline-flex items-center justify-center px-10 py-4 bg-white text-zinc-950 font-bold hover:bg-blue-600 hover:text-white transition-all duration-300"
               >
                 Let's talk
