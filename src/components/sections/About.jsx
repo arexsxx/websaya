@@ -16,7 +16,6 @@ export default function About() {
         </FadeIn>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
-          {/* KOLOM KIRI: FOTO PROFIL & MARQUEE LOGO */}
           <div className="lg:col-span-5 h-full relative">
             <div className="sticky top-32">
               <FadeIn direction="up" delay={0.2}>
@@ -34,7 +33,11 @@ export default function About() {
                     <div className="bg-zinc-950/80 backdrop-blur-md py-5 md:py-6 overflow-hidden flex border-t border-zinc-800/80 group-hover:border-blue-500/30 transition-colors">
                       <motion.div
                         animate={{ x: ["0%", "-50%"] }}
-                        transition={{ ease: "linear", duration: 24, repeat: Infinity }}
+                        transition={{
+                          ease: "linear",
+                          duration: 24,
+                          repeat: Infinity,
+                        }}
                         className="flex w-max shrink-0 items-center"
                       >
                         {[...Array(4)].map((_, i) => (
@@ -42,11 +45,6 @@ export default function About() {
                             key={i}
                             className="flex gap-12 md:gap-16 items-center px-6 md:px-8 shrink-0"
                           >
-                            {/* 
-                                PERBAIKAN CLASS: 
-                                opacity-100 grayscale-0 (Untuk Mobile/HP -> Terang & Berwarna)
-                                md:opacity-40 md:grayscale (Untuk Laptop -> Pudar & Hitam Putih)
-                            */}
                             <img
                               src="assets/logo/logo brocleanx.webp"
                               alt="Brocleanx"
@@ -101,12 +99,12 @@ export default function About() {
               </p>
 
               <a
-                href="/assets/doc/ervin_res.pdf"
+                href="/assets/doc/cv_ervin.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center px-10 py-4 bg-white text-zinc-950 font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 mb-24"
               >
-                Download Resume
+                Download CV
               </a>
             </FadeIn>
 

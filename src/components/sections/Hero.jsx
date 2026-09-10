@@ -5,7 +5,6 @@ import FadeIn from "../ui/FadeIn";
 export default function Hero() {
   const { scrollY } = useScroll();
 
-  // Efek parallax SANGAT RINGAN: Hanya background yang sedikit bergeser
   const yBg = useTransform(scrollY, [0, 1000], [0, 200]);
 
   const handleAnchorClick = (e, targetId) => {
@@ -21,12 +20,7 @@ export default function Hero() {
   };
 
   return (
-    // PERBAIKAN KUNCI: Mengubah "sticky top-0" menjadi "relative"
-    // Ini menghilangkan efek tumpukan (layering) penyebab ngelag!
-    <section
-      id="hero"
-      className="relative h-screen w-full overflow-hidden z-0"
-    >
+    <section id="hero" className="relative h-screen w-full overflow-hidden z-0">
       <motion.div
         className="absolute inset-0 w-full h-[120%] bg-center bg-cover bg-no-repeat will-change-transform"
         style={{
@@ -37,11 +31,6 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-zinc-950/85 z-0"></div>
 
-      {/* 
-        Logo Watermark dan Teks sekarang dibungkus div biasa (bukan motion.div).
-        Karena section-nya sudah "relative", elemen-elemen ini otomatis akan 
-        naik ke atas dengan sangat mulus saat halaman di-scroll (tanpa membebani GPU).
-      */}
       <div className="absolute top-0 left-0 w-full pt-28 md:pt-32 px-6 md:px-16 lg:px-32 pointer-events-none z-0">
         <img
           src="assets/logo/logo-white.webp"
@@ -50,7 +39,8 @@ export default function Hero() {
         />
       </div>
 
-      <div className="absolute bottom-6 left-0 w-full pb-16 md:pb-20 lg:pb-28 px-6 md:px-16 lg:px-32 z-10">
+      {/* Mobile: Bounded flex bottom spacing (aman dari logo). Desktop (md:): Kembali absolute bottom original 100% utuh */}
+      <div className="absolute inset-x-0 bottom-6 top-24 px-6 flex flex-col justify-end z-10 md:inset-auto md:bottom-6 md:left-0 md:w-full md:px-16 lg:md:px-32 md:pb-20 lg:md:pb-28">
         <div className="max-w-xl">
           <FadeIn delay={0.1} direction="up" triggerOnLoad={true}>
             <p className="text-zinc-400 font-medium mb-5 tracking-[0.3em] uppercase text-[9px] md:text-[10px]">
@@ -60,8 +50,8 @@ export default function Hero() {
 
           <FadeIn delay={0.2} direction="up" triggerOnLoad={true}>
             <h1 className="text-5xl md:text-6xl lg:text-[4rem] font-bold text-white mb-6 tracking-tight leading-[1.05]">
-              UI/UX and Product <br className="hidden md:block" />
-              Designer.
+              UI/UX, Web & <br className="hidden md:block" />
+              Mobile Developer
             </h1>
           </FadeIn>
 
@@ -77,23 +67,33 @@ export default function Hero() {
           </FadeIn>
 
           <FadeIn delay={0.4} direction="up" triggerOnLoad={true}>
-            <div className="flex items-baseline gap-3 text-[13px] md:text-[15px]">
+            <div className="flex flex-col-reverse md:flex-row items-baseline gap-6 text-[13px] md:text-[15px]">
               <a
-                href="#projects"
-                onClick={(e) => handleAnchorClick(e, "projects")}
-                className="font-bold text-white hover:text-blue-500 transition-colors"
+                href="/assets/doc/cv_ervin.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center px-8 py-3 md:px-10 md:py-4 bg-white text-zinc-950 font-bold hover:bg-blue-600 hover:text-white transition-all duration-300"
               >
-                View Projects
+                Download CV
               </a>
-              <span className="text-zinc-500 font-normal italic text-xs px-1">
-                or
-              </span>
-              <Link
-                to="/about"
-                className="font-bold text-white hover:text-blue-500 transition-colors"
-              >
-                Read About Me
-              </Link>
+              <div className="flex items-baseline gap-3">
+                <a
+                  href="#projects"
+                  onClick={(e) => handleAnchorClick(e, "projects")}
+                  className="font-bold text-white hover:text-blue-500 transition-colors"
+                >
+                  View Projects
+                </a>
+                <span className="text-zinc-500 font-normal italic text-xs px-1">
+                  or
+                </span>
+                <Link
+                  to="/about"
+                  className="font-bold text-white hover:text-blue-500 transition-colors"
+                >
+                  Read About Me
+                </Link>
+              </div>
             </div>
           </FadeIn>
         </div>
