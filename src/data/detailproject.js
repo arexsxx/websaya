@@ -8,7 +8,6 @@ export const detailProjects = [
     platform: "Web-based (Responsive Design)",
     heroImage: "/assets/images/brocleanx/brocleanx4.webp",
 
-    // STRUKTUR DATA BARU YANG LEBIH KAYA
     overview:
       "Brocleanx adalah platform digital untuk layanan perawatan sepatu profesional yang berbasis di Yogyakarta. Situs web ini berfungsi sebagai front-end untuk menarik calon pelanggan, memberikan informasi layanan, transparansi harga, dan mempermudah proses pemesanan melalui integrasi pesan instan (WhatsApp).",
     problem:
@@ -123,7 +122,7 @@ export const detailProjects = [
     ],
     nextProject: {
       name: "DaurCuan",
-      link: "/project/daurcuan",
+      link: "/project/DaurCuan",
     },
   },
   {
